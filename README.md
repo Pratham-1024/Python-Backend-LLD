@@ -1,2 +1,103 @@
-# Python-Backend-LLD
+# Python-Backend-LLD 
+
 Interactive course materials for the Python Backend Low Level Design module.
+
+## Modules
+
+| Module | Classes | Status |
+|--------|---------|--------|
+| Backend Project | 16 | Current |
+| Advanced Programming Concepts | 12 | Upcoming |
+| Low Level Design | 18 | Upcoming |
+| Advanced Software Engineering | 10 | Upcoming |
+
+## Module 1: Backend Project (Current)
+
+| # | Class | Topics |
+|---|-------|--------|
+| 1 | Module Overview & Intro to Backend | Client-server, HTTP basics, restaurant analogy |
+| 2 | Git: Commits, Merge, Rebase | Version control fundamentals |
+| 3 | Git: Remotes, Forks, PRs | Collaboration workflows |
+| 4 | Django: Apps, Views, URLs | Django project setup, routing |
+| 5 | Django: Models & Admin | ORM, database models, admin panel |
+| 6 | REST Framework & Serializers | DRF, serialization, API design |
+| 7 | Inheritance, IDs, Custom Queries | Model inheritance, UUID, querysets |
+| 8 | Cardinalities, N+1, Migrations | Relationships, query optimization |
+| 8A | N+1 Demo & Migrations | Hands-on N+1 fixes, migration strategies |
+| 9 | Exception Handling, Decorators, Middleware | Error handling, request pipeline |
+| 10 | Intro to AWS: EC2 & RDS | Cloud deployment basics |
+| 11 | AWS: EBS, VPC, Route 53, CloudWatch | Infrastructure & monitoring |
+| 12 | Payment Integration, Callbacks & Webhooks | Razorpay integration |
+| 13 | Reconciliation, Crons & Razorpay | Scheduled jobs, payment reconciliation |
+| 14 | Pagination, Searching & Sorting | API query features |
+| 15 | Redis Caching & Resume | Caching strategies, resume building |
+
+## Module 2: Advanced Programming Concepts (Upcoming)
+
+| # | Class | Topics |
+|---|-------|--------|
+| 1 | Intro to LLD & Module Overview | HLD vs LLD, code qualities, interview types |
+| 2 | OOP-1: Intro to OOP, Access Modifiers, Constructors | Classes, objects, self, encapsulation, @property |
+| 3 | OOP-2: Inheritance and Polymorphism | Inheritance, super(), MRO, polymorphism, duck typing, operator overloading |
+| 4 | OOP-3: Static and Abstract Base Class | @staticmethod, @classmethod, ABC, @abstractmethod |
+| 5 | Concurrency-1: Processes and Threads | Processes, threads, context switching, concurrency vs parallelism, GIL |
+| 6 | Concurrency-2: Executors and Futures | GIL deep dive, ThreadPoolExecutor, ProcessPoolExecutor, Futures |
+| 7 | Concurrency-3: Executor Syntax, Merge Sort, Mutex & Deadlock | submit(), map(), parallel merge sort, race conditions, mutex, deadlock |
+| 8 | Concurrency-4: Semaphores & Async I/O | Semaphores, producer-consumer, async/await, event loop, asyncio |
+| 9 | Python Advanced-1: Typing and Generics | Typing, generics, TypeVar, Protocol, mypy |
+| 10 | Python Advanced-2: Collections | defaultdict, Counter, deque, namedtuple, frozenset, UserDict, thread safety |
+| 11 | Python Advanced-3: Lambda Functions and FP | Functions as first-class objects, lambdas, map/filter/reduce, functools |
+| 12 | Python Advanced-4: Exception Handling | try/except/else/finally, EAFP vs LBYL, custom exceptions, copy & deepcopy |
+
+## Module 3: Low Level Design (Upcoming)
+
+| # | Class | Topics |
+|---|-------|--------|
+| 1 | SOLID Principles &mdash; Part 1 | Why SOLID, God classes, SRP, OCP, LSP intro |
+| 2 | SOLID Principles &mdash; Part 2 | OCP/LSP recap, ISP, composition, DIP, LSP vs ISP, SOLID critique |
+| 3 | Intro to Design Patterns, Singleton | GoF intro, 3 categories, Singleton (4 implementations + how each breaks) |
+| 4 | Builder Pattern | The problem (boolean hell, telescoping constructors), 4-step recipe, Pizza/HTTP/SQL builders, Director |
+| 5 | Factory Pattern Family | Simple Factory, Factory Method (OCP + DIP), Abstract Factory (family-consistency); decision tree; 8 runnable examples + UML-friendly code for PyCharm |
+| 6 | Prototype &amp; Adapter | Prototype (clone vs. construct), Adapter (translate mismatched interfaces); travel-socket intro; Django payments refactor case study; 12 runnable Python examples + BEFORE/AFTER UML diagrams |
+| 7 | Strategy &amp; Observer | First two behavioural patterns &mdash; Strategy (swap the algorithm) and Observer (one event, many reactions). Recap teaches Prototype Registry + Adapter variations (Object/Class/Two-Way). 11 runnable Python examples including a stdlib Strategy survey and an asyncio Observer. |
+| 8 | Decorator &amp; UML Diagrams | Decorator (wrap an object to add behaviour) + UML for backend design. Chai-shop case study (MasalaChai / FilterCoffee with Elaichi / Adrak), stacked API-client decorators, inheritance-explosion trap. UML: class + sequence diagrams, 6 relationship arrow types as mini-SVGs, Three Amigos history, full 14-diagram-type classification, is-a vs has-a deep-dive (Composition / Aggregation / Association / Inheritance), sequence-diagram anatomy mini-gallery (sync / async / return arrows + alt / loop / par / opt frames). Python GC + weakref primer. 8 runnable examples + Pattern Cheat Sheet appendix covering 12 patterns. |
+| 9 | Types of LLD Interviews &amp; How to Approach | The methodology class. Indian-tech tiers (Traditional IT / Product MNCs / Modern startups) + the six concrete formats. The 7-step playbook (Clarify → Requirements → Entities → APIs → Code → Demo → Trade-offs) with worked examples (Zoomcar, Splitwise, BookMyShow, Uber matching) as collapsibles. Mistakes that tank interviews. Design-a-Pen warm-up with 5 evolutions (single class → inheritance → Strategy → abstract intermediates → Protocols). Recap with 6 spot-the-pattern-from-UML quizzes (neutral domain labels) + 4 UML-relationship quizzes. 39 quizzes, balanced answer distribution (A 28% / B 28% / C 23% / D 20%). 5 runnable Python files (Parking Lot, 7-step template, Splitwise skeleton, code-review target, interview clock CLI). |
+| 10 | Design Tic-Tac-Toe | From the FRs and Discussion #12 submissions to the decided classes: re-derive every relationship (composition vs aggregation via the lifetime question &mdash; *can the part outlive the whole, or be shared?*), settle the reference class diagram, and freeze the API signatures before any code is written. |
+| 11 | Code Tic-Tac-Toe | Build the engine live from LLD-22's diagram &mdash; a single file **and** a packaged tree (models / strategies / game / `console.py` toolkit / CLI). Win-check complexity tiers (O(n&sup2;&middot;k) &rarr; O(k) &rarr; O(1)), Gomoku as a two-argument extension. Companion challenges open as Issues #14&ndash;16 (code smells, undo, winner-check). |
+| 12 | Design Parking Lot | The most-asked machine-coding problem, same playbook: align &rarr; actors &rarr; FR sentences &rarr; derive every class &rarr; ownership. Two Strategies (assignment + pricing) from minute one, the exception-vs-value flip (a full lot is not an error), `Spot` as the `Cell` analogue, the `Ticket`/`Payment` records. Use-case diagram, three labelled lot diagrams, derive-the-methods quizzes. Homework: class diagram (Discussion #21) + REST API (Discussion #20). |
+| 13 | Code Parking Lot | Build it live: reference class diagram (skeleton &rarr; derive methods &rarr; complete) &rarr; API signatures &rarr; the layered package (domain / strategies / **repositories** / service / CLI) &rarr; sequence diagram + Ticket/Spot state machines &rarr; the backend mapping (layers, REST endpoints, **schema**) &rarr; trade-offs. Single-file + packaged versions, both assert green. API & design-decision quizzes, a full API doc, and a schema-from-the-diagram exercise. |
+| 14 | Design BookMyShow | The concurrency problem, same playbook: overview &rarr; clarify &rarr; structural-vs-behavioural FRs &rarr; derive every class round-by-round &rarr; class diagram &rarr; schema &rarr; trade-offs. The star entity is the **ShowSeat** (the seat &times; show pairing) &mdash; arrived at intuitively in a second round, then resolved as an **association class = associative table**. Use-case diagram, click-to-reveal FRs, the seat-map &amp; user-journey pictures, decision quizzes (where status+price live, FK placement), an ER diagram off the class diagram, and a brief survey of concurrency approaches (code lock / pessimistic / optimistic / DB constraint / Redis) deferred to LLD-27. Homework: class diagram (Discussion #23) + REST API (Discussion #22). |
+| 15 | Code BookMyShow | The promise from LLD-26, delivered: build the **ShowSeat** model (`Show → ShowSeat`, the hold = `LOCKED` + TTL, `Ticket` + `Payment`) and make **concurrency** the headline. A **tournament** runs the *same* seat-stampede under every approach &mdash; naive (the bug) · in-process lock · pessimistic `SELECT … FOR UPDATE` · optimistic (version/CAS) · DB `UNIQUE` · Redis · the soft-lock hold &mdash; and shows code/DB/**UI** for each. **Optimistic vs pessimistic** intuition, why the `UNIQUE` constraint alone isn't enough (INSERT vs UPDATE → lost update), a **DDIA Ch.7 transactions** quiz + anomalies diagram, an animated [concurrency visualizer], and a runnable `02_concurrency_demo.py`. Discussion: [#24 freeing expired holds without overloading the DB]. |
+| 16 | Design Splitwise | The playbook on Splitwise, with the full class derivation handed forward to LLD-29. Opens with a **concurrency warm-up** (lost update, optimistic vs pessimistic, version-CAS, soft-lock vs DB-lock with the "a DB lock has no timer" insight, and the DDIA **anomaly zoo** — dirty read / read skew / write skew / phantom), then runs **overview &rarr; clarify &rarr; the FRs (generated through questions) &rarr; split strategies &rarr; the balance graph &rarr; trade-offs**. The open variable is **how an expense splits** (equal / exact / percent, with the **penny problem**); the headline is the **balance graph** and settling with the **fewest payments**. Drawing the class diagram and the debt-simplification algorithm are homework. Discussions: [#26 debt simplification] &middot; [#27 DB models &amp; indexes] &middot; [#28 class diagram]. |
+| 17 | Code Splitwise | The LLD-28 design, **built** &mdash; a single-file engine and a layered package (`models / strategies / balance_sheet / debt_simplifier / service`), both assert green. Derives the classes FR-by-FR (the `Split` / **UserExpense** association, the **Membership** join + RBAC), then the engine: the **SplitStrategy** family with the **penny fix** (integer paise + `divmod` remainder), the self-netting **BalanceSheet** (opposite debts cancel), and **debt simplification** &mdash; the problem, three approaches (**greedy net-and-match** = LeetCode 465, cycle-cancelling, optimal subset-sum) with a **what-is-NP-hard** explainer, and a greedy iteration walkthrough. Plus **normalization** (1NF/2NF/3NF MCQs), **indexes** (composite + leftmost-prefix), and the object&harr;schema bridge. Discussions [#26]/[#27]/[#28]. |
+| 18 | Design Google Calendar | The playbook on a **time-shaped** problem: scenario intro &rarr; click-to-reveal FRs &rarr; the *From-FRs-to-classes* derivation &rarr; the hard parts &rarr; the full **class diagram**. The open variable is **recurrence** (store the *rule*, expand on read; a single occurrence changes via **EXDATE + override**); the recurring shape is the **Attendee** association class (event &times; user, RSVP on the join); the time twists are **time zones** (store UTC, render local, DST edge cases) and **free/busy** (interval overlap `s1 &lt; e2 AND s2 &lt; e1`, merge-the-gaps to find a slot). Ships three companions in the same style: a **database-design** page (the same problem via **Minimal Modeling** &rarr; SQL, with an ER diagram), a **&ldquo;Falsehoods about time&rdquo;** true/false quiz (gotchas + fixes + Python), and the interview-prep handbook (10 patterns with **generic UML**) + the 20-problem worksheet library. Discussion: #29 class-design proposals. |
+
+## Module 4: Advanced Software Engineering (Upcoming)
+
+| # | Class | Topics |
+|---|-------|--------|
+| 1 | Intro to Unit Testing, Best Practices | Why tests (regression, the refactoring safety net), the testing pyramid, pytest — AAA, naming, parametrize, fixtures, `raises`, testing time; plus a first look at **evals** (testing non-deterministic LLM outputs) |
+| 2 | Mocking and Web/API Tests | Test doubles (dummy/stub/spy/mock/fake), `monkeypatch`, `unittest.mock`, the where-to-patch rule, spying; DRF **`APIClient`** + `pytest-django` API tests (runnable Django demo); and the **evals deep-dive** — mock the LLM in unit tests, grade the real one on a golden set |
+| 3 | Authentication-1: History, AuthN vs AuthZ, Passwords & Tokens | 5,000 years of proving identity (with photos); AuthN ≠ AuthZ (401 vs 403, spot-the-bug snippets); encoding vs encryption vs hashing + **how base64 works** (live encoder); password storage evolution with the crack-time math; **bcrypt** & why slow wins; timing attacks; session vs **JWT**; RBAC — plus hackattic challenges |
+| 4 | Authentication-2: bcrypt & argon2, JWT & OAuth 2 | The password libraries done right (bcrypt cost factor, **argon2** memory-hardness); session vs token auth; **JWT/JWS** in depth (why stateless, the attacks); cookie flags (HttpOnly/Secure/SameSite); Django session auth; **OAuth 2** — why it exists, OAuth 1→2 history, the PKCE flow. Includes a live demo server |
+| 5 | Authentication-3: JWT/JWS in depth & OAuth 2 | Cookies & session internals (flags, CSRF/XSS, SameSite); how a token travels (cookie vs Bearer, mobile); **JWT/JWS** deep (lifecycle, claims, `alg:none` & HS/RS-key attacks, access+refresh); **OAuth 2** (the PKCE flow built step by step). Two open-in-browser security demos |
+| 6 | Authentication-4: Implementing Auth in Django | **CORS/CSRF/SameSite** untangled + what an **`Authorization: Bearer`** header is; **Django middleware** from scratch; **OAuth** made intuitive with **OIDC** and **SSO**; **when a JWT helps vs hurts**. Each topic is followed by its own runnable Django demo — three projects (CORS/CSRF cookie app, DRF+SimpleJWT, Login-with-Google + PKCE) |
+| 7 | Email Service — Intro to Message Queues | Why not to block the request thread; the **ladder of options** (inline → thread → DB outbox → queue); **producer/broker/consumer**; acks & at-least-once, **retries + backoff + jitter**, **dead-letter queues**, **idempotency**; work-queue vs pub/sub; the ordering & exactly-once myths; brokers (Redis/RabbitMQ/Kafka/SQS) + **Celery**; a **Kafka** deep-dive. Ships a no-deps pure-Python queue **and** a runnable **Django + Celery + Redis** email service |
+| 8 | Cloud-Native Patterns: Config, Service Discovery & Resilience | **Externalized config** (the 12-factor ladder, env-var precedence, `pydantic-settings`, SecretStr, ConfigMap/Secret injection); **service discovery** (registry + heartbeats, client- vs server-side, k8s DNS); **resilience** — timeouts, **retries + backoff + jitter** (tenacity), **circuit breaker** (from scratch + pybreaker), **bulkheads**, **fallbacks**, liveness vs readiness **health checks**; the CNCF ecosystem; why the same patterns run the **AI/agent era**. Ships stdlib demos (breaker, toy registry) **and** the real stack (httpx + tenacity + pybreaker) |
+| 9 | Logging & Monitoring — Observability | The three pillars + alerts, each led by a think-first scenario quiz: **logs** (print() → the 4-piece `logging` pipeline, levels, lazy `%s` vs f-strings, **structured JSON**, correlation IDs, aggregation & the **ELK stack** with a mock-Kibana tour, the inverted index vs `LIKE`, the five logging sins); **metrics** (a sample dashboard, Counter/Gauge/Histogram, **RED vs USE**, Golden Signals, **percentiles over averages**, Prometheus pull model + PromQL); **traces** (span waterfalls, `traceparent`, OpenTelemetry); **alerts** (symptoms vs causes, the FOR clause, **alert fatigue**, SLI/SLO/SLA & error budgets); + observability in the **AI era**. Ships 2 stdlib demos (logging tour, live alert rule) + structlog & a single-file **Django request-logging middleware** |
+| 10 | Containerization — Docker, Compose & Beyond | "Works on my machine" autopsied; what a container IS (hypervisor → namespaces + cgroups → the hidden-Linux-VM truth about Docker Desktop + free alternatives); **images & layers**, the **layer-cache** and burned-`.env` lessons, the production **Dockerfile** line by line, CMD vs ENTRYPOINT, multi-stage; **volumes**, env-injection, ports, troubleshooting; **docker-compose** (service-name DNS, started≠ready, persistent volumes); **observing containers** (percentiles vs average, RED vs USE, exit-137/OOM, readiness vs liveness); k8s teaser + OCI history + AI-era sandboxes. 4 demo kits incl. the Dockerfile as **seven step-files** for line-by-line demos, + the Aug'25 reference guide bundled |
+
+## Quick Start
+
+Open any class folder and view its `index.html` in your browser. From LLD-13 onward, every class also ships a [`code/`] directory with self-contained `python3`-runnable examples (no `pip install` needed) and a class-level `README.md` you can read instead of the HTML.
+
+```bash
+# Browse a class's interactive notes
+open LLD-18-Prototype-and-Adapter/index.html
+
+# Run one of its code examples
+python3 LLD-18-Prototype-and-Adapter/code/06_payment_gateway_adapter.py
+
+# Or just read the long-form lesson
+less LLD-18-Prototype-and-Adapter/README.md
+```
