@@ -1,4 +1,4 @@
-# LLD-01: Intro to Low-Level Design & Module Overview
+# Intro to Low-Level Design & Module Overview
 
 > You've built a working Django backend — APIs, payments, caching. Now learn **how to write code that doesn't collapse under its own weight.**
 
