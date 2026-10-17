@@ -1,5 +1,5 @@
 
-# LLD-10: Python Advanced-2 — Collections
+#  Python Advanced-2 — Collections
 
 > Python's built-in list and dict are great. But for specific problems, the `collections` module has purpose-built tools that are faster, cleaner, and less buggy.
 
